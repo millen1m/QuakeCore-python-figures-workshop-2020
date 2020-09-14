@@ -1,0 +1,12 @@
+
+# Added by pypaper
+.idea/
+user_paths.py
+*.pyc
+temp_output/
+fw_scripts/__pycache__/
+fw_scripts/matplotlibrc
+*TSWLatexianTemp_*
+fw-paper/fw-paper.pdf
+temp/*
+venv/
