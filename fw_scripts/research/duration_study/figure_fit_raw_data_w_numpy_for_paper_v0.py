@@ -23,9 +23,9 @@ def create():
 
     subplot.plot(x, y, c='b')
     subplot.plot(x, y_fit, c='r')
-    subplot.set_xlim([0, 5])  # TODO: comment this out
-    subplot.set_ylim([0, 16])  # TODO: comment this out
-    # my_formatter(subplot)  # TODO: uncomment this
+    # subplot.set_xlim([0, 5])  # TODO: comment this out
+    # subplot.set_ylim([0, 16])  # TODO: comment this out
+    my_formatter(subplot)  # TODO: uncomment this
     plt.show()
 
 

@@ -15,8 +15,8 @@ def create():
     for i in range(len(x)):
         subplot.plot(x[i], y[i], 'o', c='b', alpha=0.5, label='Raw data')
     subplot.plot(x, y_fit, c='r', label='Fitted')
-    subplot.axvspan(0.5, 1.5, color='orange', alpha=0.3)
-    cline = ef.create_custom_legend_patch('Critical zone', c='orange', alpha=0.3)
+    subplot.axvspan(0.5, 1.5, color='orange', alpha=1)
+    cline = ef.create_custom_legend_patch(label='Critical zone', c='orange', alpha=0.3)
     ef.revamp_legend(subplot, loc='upper left', add_handles=[cline])
     plt.show()
 

@@ -18,6 +18,8 @@ def create():
                  color='k', fontsize=9)
     subplot.plot(x, y, c='b')
     subplot.plot(x, y_fit, c='r')
+    subplot.set_xlim([0, 5])
+    subplot.set_ylim([0, 18])
     plt.show()
 
 

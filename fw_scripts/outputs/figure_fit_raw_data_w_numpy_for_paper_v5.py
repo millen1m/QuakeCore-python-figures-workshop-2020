@@ -5,6 +5,7 @@ import engformat as ef
 import settings as ops
 from bwplot import cbox
 
+
 def create(show=0, save=0):
 
     data = np.loadtxt(ap.MODULE_DATA_PATH + 'basic_raw_data.csv', skiprows=1, delimiter=',').T
@@ -12,7 +13,7 @@ def create(show=0, save=0):
     y = data[1]
     ps = np.polyfit(x, y, deg=2)
     y_fit = ps[0] * x ** 2 + ps[1] * x + ps[2]
-    bf, subplots = plt.subplots(nrows=2, sharex='col', figsize=(ops.ONE_COL, 5))
+    bf, subplots = plt.subplots(nrows=2, sharex='col', figsize=(ops.TWO_COL, 5))
     for i in range(len(x)):
         subplots[0].plot(x[i], y[i], 'o', c='b', alpha=0.5, label='Raw data')
     subplots[0].plot(x, y_fit, c='r', label='Fitted')
@@ -38,11 +39,15 @@ def create(show=0, save=0):
     name = __file__.replace('.py', '')
     name = name.split("figure_")[-1]
     if save:
-        bf.savefig(ap.PUB_FIG_PATH + 'name' + ops.PUB_FIG_FILE_TYPE, dpi=ops.PUB_FIG_DPI)
+        bf.savefig(ap.PUB_FIG_PATH + name + ops.PUB_FIG_FILE_TYPE, dpi=ops.PUB_FIG_DPI)
         print(ef.latex_for_figure(ap.FIG_FOLDER, name, ops.PUB_FIG_FILE_TYPE))
     if show:
         plt.show()
 
 
 if __name__ == '__main__':
+
+    # d = cbox(0)
+    # e = cbox(1)
+    # f = cbox(3)
     create(save=1, show=1)

@@ -15,8 +15,8 @@ def create():
     for i in range(len(x)):
         subplot.plot(x[i], y[i], 'o', c='b', alpha=0.5, label='Raw data')
     subplot.plot(x, y_fit, c='r', label='Fitted')
-    plt.legend()  # TODO: comment this out
-    # ef.revamp_legend(subplot, loc='upper left')  # TODO: uncomment this
+    # plt.legend()  # TODO: comment this out
+    ef.revamp_legend(subplot, loc='upper left')  # TODO: uncomment this
     plt.show()
 
 

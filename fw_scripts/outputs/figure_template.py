@@ -4,6 +4,8 @@ import engformat as ef
 
 from fw_scripts.tools import fig_functions as ff
 import all_paths as ap
+import numpy as np
+
 
 import settings as ops
 
@@ -11,6 +13,10 @@ import settings as ops
 def create(save=0, show=0):
 
     bf, subplot = plt.subplots(figsize=(ops.TWO_COL, 4))
+    x = np.linspace(0, 1, 50)
+    y = x
+    z = x
+    ef.plot_multicolor_line(subplot, x, y, z, vmin=0, vmax=1)
     subplot.plot([0], [0], label="", c=cbox(0))
 
     subplot.set_xlabel('Period [s]')

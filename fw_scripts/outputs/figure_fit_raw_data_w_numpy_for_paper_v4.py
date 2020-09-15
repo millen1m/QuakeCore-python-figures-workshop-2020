@@ -31,15 +31,18 @@ def create(show=0, save=0):
 
     subplot.set_xlabel('Pizza eaten [slices]')
     subplot.set_ylabel('My love for Pizza [J]')
+
     plt.tight_layout()
+    # if you are using complex layouts then use GridSpec
+
     name = __file__.replace('.py', '')
     name = name.split("figure_")[-1]
     if save:
-        bf.savefig(ap.PUB_FIG_PATH + 'name' + ops.PUB_FIG_FILE_TYPE, dpi=ops.PUB_FIG_DPI)
+        bf.savefig(ap.PUB_FIG_PATH + name + ops.PUB_FIG_FILE_TYPE, dpi=ops.PUB_FIG_DPI)
         print(ef.latex_for_figure(ap.FIG_FOLDER, name, ops.PUB_FIG_FILE_TYPE))
     if show:
         plt.show()
 
 
 if __name__ == '__main__':
-    create(save=1, show=1)
+    create(save=0, show=1)

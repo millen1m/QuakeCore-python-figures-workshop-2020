@@ -1,0 +1,2 @@
+from fw_scripts.outputs import figure_fit_raw_data_w_numpy_for_paper_v4
+figure_fit_raw_data_w_numpy_for_paper_v4.create(save=1)
